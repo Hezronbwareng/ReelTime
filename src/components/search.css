@@ -1,0 +1,59 @@
+.search {
+    position: relative;
+    width: 300px;
+    height: 40px;
+    
+}
+
+.search input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: #ffffff;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    outline: none;
+    border-radius: 25px; /* Rounded corners for a modern look */
+    padding: 0 10px 0 45px !important;
+    backdrop-filter: blur(10px);
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1; /* Ensures the input field is above the icon */
+}
+
+.search input:focus {
+    border-color: #4c9aff; /* Adds a blue border on focus */
+    box-shadow: 0 0 5px rgba(76, 154, 255, 0.7); /* Adds a soft glow effect */
+}
+
+.search input::placeholder {
+    color: #ffffff;
+    opacity: 0.8; /* Makes the placeholder text slightly lighter */
+    transition: opacity 0.3s ease;
+}
+
+.search input:focus::placeholder {
+    opacity: 0.6; /* Darkens placeholder text when focused */
+}
+
+.search i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%); /* Centers the icon vertically */
+    color: #ffffff;
+    font-size: 18px;
+    z-index: 2; /* Ensures the icon is above the input */
+    pointer-events: none; /* Prevents the icon from interfering with input clicks */
+    transition: color 0.3s ease;
+}
+
+.search input:hover + i {
+    color: #4c9aff; /* Changes icon color on hover */
+}
+
+.search input:focus + i {
+    color: #4c9aff; /* Changes icon color when input is focused */
+}
