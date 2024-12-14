@@ -45,10 +45,11 @@ function Banner() {
                     <div className="date active">
                         <h2>On 15 August</h2>
                     </div>
-                    <div className="trailer active">
+                    <div className="trailer d-flex align-items-center justify-content-center active">
             <a href="#" className="playBtn">
-                <FontAwesomeIcon icon={faPlay} size="2x" />
+                <FontAwesomeIcon icon={faPlay} size="2x" className='icon' />
             </a>
+            <p>Watch Trailer</p>
         </div>
 
                 </div>
