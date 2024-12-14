@@ -1,0 +1,74 @@
+/* Container styles for the trend section */
+.trend {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+    /* Ensure it's visible by default */
+    display: block;
+}
+
+.trend .section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    /* Make sure the title is always visible */
+    visibility: visible;
+}
+
+/* Swiper styles */
+.trendSwipper {
+    padding: 50px 0;
+    /* Ensure Swiper is visible and has space in the layout */
+    display: block;
+    overflow: hidden; /* Prevents content from spilling outside */
+}
+
+.trendSwipper .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 240px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Ensure each slide has a minimum height for visibility */
+    min-height: 200px;
+}
+
+.trendSwipper .swiper-slide img {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Ensure images are visible within their container */
+    max-width: 100%;
+    height: auto;
+}
+
+/* Hover effect for Swiper slides */
+.trendSwipper .swiper-slide img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .trendSwipper .swiper-slide {
+        width: 200px;
+    }
+}
+
+/* Additional responsive adjustments for smaller screens */
+@media (max-width: 480px) {
+    .trend {
+        padding: 20px 0;
+    }
+    .trend .section-title {
+        font-size: 1.2rem;
+    }
+    .trendSwipper .swiper-slide {
+        min-height: 150px;
+    }
+}
