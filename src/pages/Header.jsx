@@ -6,7 +6,7 @@ import Search from '../components/Search';
 function Header() {
   return (
     <header>
-        <a href="/" className='logo'>CineStream</a>
+        <a href="/" className='logo'>ReelTime</a>
 
         <ul className="nav">
             {navListData.map(nav => (
