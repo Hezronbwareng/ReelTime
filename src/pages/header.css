@@ -19,13 +19,16 @@ header.scrolled {
 }
 
 .logo{
-    font-family: 'Racing Sans One', cursive;
-    font-size: 35px;
-    color: #ffffff;
-    letter-spacing: 2px;
-    font-weight: 800;
-    text-decoration: none;
+    font-family: 'Oswald', sans-serif; 
+    font-size: 35px; 
+    color: #ffffff; 
+    letter-spacing: 3px; 
+    font-weight: 600; 
     text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); 
+    background: linear-gradient(90deg, #ff3700, #ffae00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .nav{
     display: flex;

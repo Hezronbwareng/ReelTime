@@ -13,15 +13,68 @@
 }
 
 .banner .date h2{
-    font-family: 'Racing Sans One', cursive;
+    font-family: 'Osward', sans-serif;
     color: #ffffff;
     text-transform: uppercase;
-    font-size: 7rem;
+    font-size: 6rem;
     text-align: center;
     margin-bottom: 20px;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
-    -webkit-mask: linear-gradient(#000000 0 0), linear-gradient(#000000 0 0);
-    -webkit-mask-clip: text, padding-box;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+
+    -webkit-mask: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    -webkit-mask-clip: text;
     -webkit-mask-composite: xor;
-    
+       
+    }
+
+    /*
+    .banner .date h2 {
+    font-family: 'Oswald', sans-serif; 
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 6rem; 
+    text-align: center;
+    margin-bottom: 20px;
+
+  
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+
+ 
+    background: linear-gradient(90deg, #ff3700, #ffae00, #ff3700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+
+    animation: glow 2s infinite alternate;
+
+    -webkit-mask: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    -webkit-mask-clip: text;
+    -webkit-mask-composite: xor;
 }
+
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.4);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.6);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .banner .date h2 {
+        font-size: 4rem; 
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner .date h2 {
+        font-size: 3rem; 
+        margin-bottom: 10px;
+    }
+}
+
+*/
