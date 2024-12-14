@@ -4,17 +4,17 @@ import tittleImg from  '../images/transformer-title.png'
 import Button from './Button'
 
 
-function MovieContent() {
+function MovieContent( {movie}) {
   return (
-    <div className="content active">
-                            <img src={tittleImg} alt="Movie Title" className="movie-title" />
+    <div className={`content ${movie.active ? 'active' : undefined}`}>
+                            <img src={movie.tittleImg} alt="Movie Title" className="movie-title" />
                             <h4>
-                                <span>Year</span>
-                                <span><i>age</i></span>
-                                <span>length</span>
-                                <span>gaterory</span>
+                                <span>{movie.year}</span>
+                              <span><i> {movie.ageLimit}</i></span>
+                                <span>{movie.length}</span>
+                                <span>{movie.category}</span>
                             </h4>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem cum ullam aliquam exercitationem unde facere sapiente laudantium dignissimos perferendis optio, architecto at? Repellat architecto ullam pariatur numquam obcaecati ut ipsum!</p>
+                            <p>{movie.description}</p>
                             <div className="button">
                                 <Button icon={<ion-icon name="bookmark-outline"></ion-icon> } name="Book" color="#ff3700" bgColor="#ffffff"/>
                                 <Button icon={<ion-icon name="add-outline"></ion-icon>} name="My List"/>

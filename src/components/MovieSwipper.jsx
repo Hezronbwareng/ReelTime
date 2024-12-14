@@ -11,7 +11,7 @@ import 'swiper/css/pagination'
 
 import { Autoplay, EffectCoverflow } from 'swiper/modules';
 
-function MovieSwipper({slides}) {
+function MovieSwipper({slides,slideChange}) {
   return (
   <Swiper 
   effect={'coverflow'}
@@ -32,8 +32,8 @@ function MovieSwipper({slides}) {
   className='movieSwipper' >
     {
         slides.map(slide => (
-            <SwiperSlide>
-            <img src={slide.previewImg} alt="Preview Image" />
+            <SwiperSlide key={slide._id}>
+            <img src={slide.previewImg} alt="Preview Image" onClick={ ()=> slideChange(slide._id)} />
            </SwiperSlide>
 
         ))
