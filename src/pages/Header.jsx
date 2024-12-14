@@ -3,6 +3,7 @@ import '../pages/header.css'
 import NavListItem from '../components/NavListItem'
 import navListData from '../data/navListData';
 import Search from '../components/Search';
+import Button from '../components/Button';
 function Header() {
   return (
     <header>
@@ -15,6 +16,7 @@ function Header() {
             }    
         </ul>
         <Search/>
+        <Button icon={<ion-icon name="log-in-outline"></ion-icon>} name="Sign In"/>
     </header>
    
   );

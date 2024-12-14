@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'swiper/css';
 import { useState } from 'react'
 
 import './App.css'

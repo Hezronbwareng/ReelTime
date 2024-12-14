@@ -6,6 +6,7 @@ import bgImg from '../images/bg-transformer.jpg'
 import MovieContent from '../components/MovieContent';
 import MovieDate from '../components/MovieDate';
 import PlayBtn from '../components/PlayBtn';
+import MovieSwipper from '../components/MovieSwipper';
 
 
 function Banner() {
@@ -38,9 +39,12 @@ function Banner() {
 
                 </div>
             </div>
-            </div>
-            
+            </div>            
         </div>
+        {
+            movies &&  movies.length > 0 &&  <MovieSwipper slides={movies}/> 
+        }
+       
     </div>
   )
 }
