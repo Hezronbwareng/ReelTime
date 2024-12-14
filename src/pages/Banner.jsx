@@ -1,7 +1,7 @@
 
 import React, {useState, useEffect} from 'react'
 import './banner.css'
-import bgImg from '../images/bg-transformer.jpg'
+
 
 import MovieContent from '../components/MovieContent';
 import MovieDate from '../components/MovieDate';
@@ -24,8 +24,15 @@ function Banner() {
     },[])
 
     const handleSlideChange = id => {
-        console.log(id);
-    }
+        const newMovie = movies.map( movie =>{
+            movie.active = false;
+            if(movie._id === id ){
+                movie.active = true;
+            }
+            return movie;
+        });
+        setMovies(newMovie)
+    };
 
   return (
     <div className='banner'>
