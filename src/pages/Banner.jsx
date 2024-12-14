@@ -2,9 +2,10 @@
 import React, {useState, useEffect} from 'react'
 import './banner.css'
 import bgImg from '../images/bg-transformer.jpg'
-import tittleImg from  '../images/transformer-title.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay } from '@fortawesome/free-solid-svg-icons';
+
+import MovieContent from '../components/MovieContent';
+import MovieDate from '../components/MovieDate';
+import PlayBtn from '../components/PlayBtn';
 
 
 function Banner() {
@@ -28,31 +29,15 @@ function Banner() {
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-lg-6 col-md-12">
-                        <div className="content active">
-                            <img src={tittleImg} alt="Movie Title" className="movie-title" />
-                            <h4>
-                                <span>Year</span>
-                                <span><i>age</i></span>
-                                <span>length</span>
-                                <span>gaterory</span>
-                            </h4>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem cum ullam aliquam exercitationem unde facere sapiente laudantium dignissimos perferendis optio, architecto at? Repellat architecto ullam pariatur numquam obcaecati ut ipsum!</p>
-                            <div className="button">Button</div>
-                        </div>
+                        <MovieContent/>
                     </div>
-                </div>
+              
                 <div className="col-lg-6 col-md-12">
-                    <div className="date active">
-                        <h2>On 15 August</h2>
-                    </div>
-                    <div className="trailer d-flex align-items-center justify-content-center active">
-            <a href="#" className="playBtn">
-                <FontAwesomeIcon icon={faPlay} size="2x" className='icon' />
-            </a>
-            <p>Watch Trailer</p>
-        </div>
+                   <MovieDate/>
+                   <PlayBtn/>            
 
                 </div>
+            </div>
             </div>
             
         </div>
