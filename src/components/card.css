@@ -25,6 +25,7 @@ section .movie-card p{
     font-weight: 400;
     text-align: center;
     padding: 10px 0;
+    color: #bea8aa;
 }
 
 section .movie-card .content{
@@ -59,12 +60,8 @@ section .movie-card .content h4::before{
     bottom: -10px;
     height: 5px;
     width: 80%;
-    background: linear-gradient(
-        90deg,
-        var(--primary)
-        var(--primary)
-        transparent 
-    );
+    background: linear-gradient(90deg, var(--primary) 0%, transparent 100%);
+ 
 }
 
 section .movie-card .content ion-icon{
