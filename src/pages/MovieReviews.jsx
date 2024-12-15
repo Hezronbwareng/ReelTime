@@ -26,13 +26,11 @@ function MovieReviews() {
     fetchMovies();
   }, []);
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
-
-  const handleRatingChange = (movieId, newRating) => {
-    setRatings(prevRatings => ({
+  // Update rating
+  const handleRatingChange = (movieId, rating) => {
+    setRatings((prevRatings) => ({
       ...prevRatings,
-      [movieId]: newRating
+      [movieId]: rating,
     }));
   };
 
@@ -48,7 +46,7 @@ function MovieReviews() {
               key={movie.id}
               movie={movie}
               rating={ratings[movie.id] || 0}
-              onRate={handleRatingChange}
+              onRatingChange={handleRatingChange}
             />
           ))}
         </div>

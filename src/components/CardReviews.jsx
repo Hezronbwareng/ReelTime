@@ -1,34 +1,50 @@
 import React from 'react';
 import './cardReviews.css';
 
-function CardReviews({ movie, rating, onRate }) {
+const CardReview = ({ movie, rating, onRatingChange }) => {
+  const handleStarClick = (starIndex) => {
+    // Update the rating based on the clicked star index
+    onRatingChange(movie.id, starIndex + 1);
+  };
+
+  const renderStars = () => {
+    const stars = [];
+    for (let i = 0; i < 5; i++) {
+      stars.push(
+        <span
+          key={i}
+          className={`star ${i < rating ? 'filled' : ''}`}
+          onClick={() => handleStarClick(i)}
+        >
+          &#9733; {/* Unicode for a star */}
+        </span>
+      );
+    }
+    return stars;
+  };
+
   return (
-    <div className="col-lg-3 col-md-4 col-sm-6">
-      <div className="movie-card">
-        <img src={movie.previewImg} alt={movie.title} className="movie-image" loading="lazy" />
-        <div className="movie-info">
-          <h4 className="movie-title">{movie.title}</h4>
-          <p className="movie-category">{movie.category}</p>
-          <p className="movie-length">{movie.length}</p>
-          <div className="star-rating">
-            {renderStars(rating, onRate)}
-          </div>
+    <div className="card-review">
+      <div
+        className="card-review-image"
+        style={{ backgroundImage: `url(${movie.bgImg})` }}
+      >
+        <div className="card-review-content">
+          <img
+            src={movie.titleImg}
+            alt={movie.title}
+            className="card-review-title-img"
+          />
+          <h3>{movie.title}</h3>
+          <p className="card-review-year">{movie.year}</p>
+          <p className="card-review-category">{movie.category}</p>
+
+          {/* Render the star rating */}
+          <div className="stars">{renderStars()}</div>
         </div>
       </div>
     </div>
   );
-}
-
-const renderStars = (rating, onRate) => {
-  return Array.from({ length: 5 }, (_, i) => (
-    <button 
-      key={i}
-      className={`star ${i < rating ? 'filled' : ''}`}
-      onClick={() => onRate(i + 1)}
-    >
-      ★
-    </button>
-  ));
 };
 
-export default CardReviews;
+export default CardReview;

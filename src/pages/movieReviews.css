@@ -1,25 +1,49 @@
 #movie-reviews {
-    background-color: #121212;
-    padding: 40px 0;
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  #movie-reviews .container-fluid {
-    padding: 0 15px;
-  }
-  
-  #movie-reviews .section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 30px;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  
-  .movie-reviews .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
+  background-color: #121212;
+  padding: 40px 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+#movie-reviews .container-fluid {
+  padding: 0 15px;
+}
+
+#movie-reviews .section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.card-review {
+  flex: 0 0 auto;
+  width: 300px;
+  background-color: #1f1f1f;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.card-review-image {
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  height: 350px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+}
