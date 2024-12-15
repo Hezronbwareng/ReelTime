@@ -1,0 +1,25 @@
+#movie-reviews {
+    background-color: #121212;
+    padding: 40px 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  #movie-reviews .container-fluid {
+    padding: 0 15px;
+  }
+  
+  #movie-reviews .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .movie-reviews .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }

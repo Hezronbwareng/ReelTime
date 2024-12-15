@@ -44,7 +44,7 @@ function Trend() {
                     <Swiper
                         breakpoints={{
                             320: { slidesPerView: 1, spaceBetween: 20 },
-                            480: { slidesPerView: 2, spaceBetween: 30 }, // Adjusted for better mobile view
+                            480: { slidesPerView: 2, spaceBetween: 30 }, 
                             640: { slidesPerView: 4, spaceBetween: 30 },
                             992: { slidesPerView: 6, spaceBetween: 30 },
                         }}
