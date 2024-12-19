@@ -14,19 +14,19 @@ function Header() {
 
   return (
     <header>
-      {/* Logo */}
+    
       <a href="/" className="logo">ReelTime</a>
 
-      {/* Search and Actions */}
+   
       <div className="header-actions">
-        <Button icon={<ion-icon name="log-in-outline"></ion-icon>} name="Sign In" className="signIn" />
         <Search className="search-bar" />
+        <Button icon={<ion-icon name="log-in-outline"></ion-icon>} name="Sign In" className="signIn" />
         <div className="menu-icon" onClick={toggleMenu}>
           <ion-icon name="menu-outline"></ion-icon>
         </div>
       </div>
 
-      {/* Navigation Menu */}
+      
       <ul className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
         {navListData.map(nav => (
           <NavListItem key={nav._id} nav={nav} />

@@ -1,51 +1,45 @@
-/* General Header Styling */
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
+    flex-wrap: nowrap; 
 }
 
-/* Logo Styling */
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #fff;
 }
 
-/* Search Bar */
-.search-bar {
-    flex-grow: 1;
-    margin: 0 20px;
-}
-
-/* Navigation Menu */
 .nav {
     display: flex;
     list-style: none;
     gap: 20px;
 }
 
-/* Sign-In Button */
-.signIn {
-    background-color: #ff5722;
-    color: #fff;
-    border: none;
-    padding: 5px 15px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 4px;
+.nav li {
+    display: inline;
 }
 
-/* Menu Icon */
 .menu-icon {
     display: none;
-    font-size: 1.8rem;
-    color: #fff;
+    font-size: 2rem;
     cursor: pointer;
+    color: #ffffff;
 }
 
-/* Responsive Styles */
+.search-bar {
+    flex-grow: 1;
+    margin: 0 10px;
+}
+
+.signIn {
+    font-size: 1rem;
+    padding: 5px 12px;
+    white-space: nowrap; 
+}
+
+/* Responsive Styles for Small Screens */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -54,21 +48,21 @@ header {
 
     .logo {
         margin-bottom: 10px;
-        text-align: center;
+        align-self: center;
     }
 
     .header-actions {
         display: flex;
-        align-items: center;
         justify-content: space-between;
+        align-items: center;
         width: 100%;
         padding: 0 10px;
     }
 
     .search-bar {
         order: 2;
-        width: 100%;
         margin: 10px 0;
+        width: 100%;
     }
 
     .signIn {
@@ -76,18 +70,18 @@ header {
     }
 
     .menu-icon {
-        display: block;
         order: 3;
+        display: block;
     }
 
     .nav {
         display: none;
         flex-direction: column;
         gap: 10px;
-        background-color: white;
         position: absolute;
-        top: 100%;
+        top: 60px;
         right: 20px;
+        background-color: rgb(25, 17, 17);
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 5px;
