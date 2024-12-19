@@ -1,5 +1,5 @@
-import React from 'react'
-import './search.css'
+import React from 'react';
+import './search.css';  
 function Search() {
   return (
     <div className='search'>
@@ -8,7 +8,7 @@ function Search() {
             <input type="text" placeholder='search' />
         </div>
     </div>
-  )
+  );
 }
 
-export default Search
+export default Search;

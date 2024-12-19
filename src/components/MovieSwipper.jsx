@@ -30,7 +30,8 @@ function MovieSwipper({slides,slideChange}) {
   loop={true}
   modules={[Autoplay, EffectCoverflow]}
   className='movieSwipper' >
-    {
+  
+      {
         slides.map(slide => (
             <SwiperSlide key={slide._id}>
             <img src={slide.previewImg} alt="Preview Image" onClick={ ()=> slideChange(slide._id)} />

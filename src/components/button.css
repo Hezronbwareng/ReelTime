@@ -1,11 +1,11 @@
 .mainBtn {
     position: relative;
-    display: inline;
+    display: inline-block;  /* Changed from inline to inline-block for better control */
     align-items: center;
     gap: 10px;
     margin-right: 15px;
     background: var(--primary);
-    color:#ffffff;
+    color: #ffffff;
     padding: 5px 16px;
     text-decoration: none;
     font-size: 1.1rem;
@@ -15,10 +15,30 @@
     transition: 0.3s;
     cursor: pointer !important;
     border: none;
-
 }
-.mainBtn:hover{
+
+.signIn {
+    border-radius: 50px; 
+}
+
+.mainBtn:hover {
     color: var(--primary) !important;
     background: #ffffff !important;
     cursor: pointer;
+}
+
+/* Mobile-specific button style */
+@media (max-width: 768px) {
+    .mainBtn {
+        font-size: 0.9rem; 
+        padding: 5px 12px;  
+        white-space: nowrap; 
+    }
+
+
+    .signIn {
+        font-size: 0.9rem;
+        padding: 5px 12px;
+        border-radius: 50px; 
+    }
 }
