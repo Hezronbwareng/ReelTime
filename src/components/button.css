@@ -1,6 +1,6 @@
 .mainBtn {
     position: relative;
-    display: inline-block;  /* Changed from inline to inline-block for better control */
+    display: inline-block; 
     align-items: center;
     gap: 10px;
     margin-right: 15px;

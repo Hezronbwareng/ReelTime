@@ -1,55 +1,100 @@
-/* General Styles */
+/* General Header Styling */
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-  }
-  
-  .logo {
+}
+
+/* Logo Styling */
+.logo {
     font-size: 1.5rem;
     font-weight: bold;
-  }
-  
-  .nav {
+    color: #fff;
+}
+
+/* Search Bar */
+.search-bar {
+    flex-grow: 1;
+    margin: 0 20px;
+}
+
+/* Navigation Menu */
+.nav {
     display: flex;
     list-style: none;
     gap: 20px;
-  }
-  
-  .nav li {
-    display: inline;
-  }
-  
-  .menu-icon {
-    display: none;
-    font-size: 2rem;
+}
+
+/* Sign-In Button */
+.signIn {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 5px 15px;
+    font-size: 1rem;
     cursor: pointer;
-    color: #ffffff;
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
+    border-radius: 4px;
+}
+
+/* Menu Icon */
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .header-actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .search-bar {
+        order: 2;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .signIn {
+        order: 1;
+    }
+
     .menu-icon {
-      display: block; /* Show the hamburger icon */
+        display: block;
+        order: 3;
     }
-  
+
     .nav {
-      display: none; /* Hide the navigation menu by default */
-      flex-direction: column;
-      gap: 10px;
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      background-color: white;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      z-index: 1000;
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: white;
+        position: absolute;
+        top: 100%;
+        right: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        z-index: 1000;
     }
-  
+
     .nav.nav-open {
-      display: flex; /* Show the menu when toggled */
+        display: flex;
     }
-  }
-  
+}

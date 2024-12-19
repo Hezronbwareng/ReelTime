@@ -14,11 +14,16 @@ function Header() {
 
   return (
     <header>
+      {/* Logo */}
       <a href="/" className="logo">ReelTime</a>
 
-      {/* Hamburger Icon */}
-      <div className="menu-icon" onClick={toggleMenu}>
-        <ion-icon name="menu-outline"></ion-icon>
+      {/* Search and Actions */}
+      <div className="header-actions">
+        <Button icon={<ion-icon name="log-in-outline"></ion-icon>} name="Sign In" className="signIn" />
+        <Search className="search-bar" />
+        <div className="menu-icon" onClick={toggleMenu}>
+          <ion-icon name="menu-outline"></ion-icon>
+        </div>
       </div>
 
       {/* Navigation Menu */}
@@ -27,9 +32,6 @@ function Header() {
           <NavListItem key={nav._id} nav={nav} />
         ))}
       </ul>
-
-      <Search />
-      <Button icon={<ion-icon name="log-in-outline"></ion-icon>} name="Sign In" className="signIn" />
     </header>
   );
 }
