@@ -1,25 +1,26 @@
-main{
+main {
     position: relative;
     width: 100%;
     min-height: 100vh;
     padding: 0 0 120px;
     background: #000000;
 }
-main::before{
-position: absolute;
-counter-reset: '';
-left: 0;
-top: -80px;
-width: 100%;
-height: 200px;
-background:#000000 ;
-filter: blur(50px);
+
+main::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: -80px;
+    width: 100%;
+    height: 200px;
+    background: #000000;
+    filter: blur(50px);
 }
 
 /* ------------------------
 Section General
 --------------------------- */
-section{
+section {
     position: relative;
     overflow: hidden;
     padding: 120px 100px 20px;
@@ -28,7 +29,8 @@ section{
     transform-origin: bottom;
     z-index: 1100;
 }
-section h1{
+
+section h1 {
     font-weight: 400;
     font-size: 4em;
     letter-spacing: 1px;
@@ -36,7 +38,8 @@ section h1{
     text-align: center;
     color: #ffffff;
 }
-section .section-title{
+
+section .section-title {
     position: relative;
     color: #ffffff;
     font-weight: 500;
@@ -44,26 +47,85 @@ section .section-title{
     letter-spacing: 1px;
     margin-bottom: 30px;
     text-transform: uppercase;
-
 }
-section .section-title::after{
+
+section .section-title::after {
     position: absolute;
     content: '';
     left: 0;
     bottom: -30px;
     height: 5px;
     width: 50%;
-    background: linear-gradient(
-        90deg, var(--primary),
-        var(--primary),
-        transparent
-    );
+    background: linear-gradient(90deg, var(--primary), var(--primary), transparent);
     z-index: 1000;
-
 }
-section p{
-    font-weight: 300;
-    color: #111111;
-    letter-spacing: 1px;
 
+section p {
+    font-weight: 300;
+    color: #dddddd;
+    letter-spacing: 1px;
+}
+
+/* ------------------------
+Responsive Styles
+--------------------------- */
+@media (max-width: 1024px) {
+    section {
+        padding: 80px 50px 20px; /* Reduce padding for smaller screens */
+    }
+
+    section h1 {
+        font-size: 3em; /* Adjust headline size */
+        margin-bottom: 100px;
+    }
+
+    section .section-title {
+        font-size: 1.4rem; /* Slightly smaller titles */
+    }
+
+    section .section-title::after {
+        width: 40%; /* Adjust underline size */
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 60px 30px 20px; /* Further reduce padding for tablets */
+    }
+
+    section h1 {
+        font-size: 2.5em;
+        margin-bottom: 80px;
+    }
+
+    section .section-title {
+        font-size: 1.2rem;
+    }
+
+    section .section-title::after {
+        width: 30%;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 40px 15px 10px; /* Minimized padding for small screens */
+    }
+
+    section h1 {
+        font-size: 2em;
+        margin-bottom: 50px;
+    }
+
+    section .section-title {
+        font-size: 1rem;
+    }
+
+    section .section-title::after {
+        width: 20%;
+    }
+
+    section p {
+        font-size: 0.9rem; /* Adjust paragraph text size */
+    }
 }

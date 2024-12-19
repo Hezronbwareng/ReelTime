@@ -24,7 +24,7 @@ header {
 .header-actions {
     display: flex;
     align-items: center;
-    gap: 10px; /* Space between search bar and button */
+    gap: 10px; 
 }
 
 .search-bar {

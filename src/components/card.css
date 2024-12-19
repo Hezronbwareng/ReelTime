@@ -1,12 +1,26 @@
-section .movie-card{
+/* Movie Card Styles */
+section .movie-card {
     border: none;
     position: relative;
     border-radius: 0;
     background: #000000 !important;
     box-shadow: 0 0 16px rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    height: 100%;
 }
 
-section .movie-card::before{
+section .movie-card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+section .movie-card:hover img {
+    transform: scale(1.05);
+    filter: brightness(80%);
+}
+
+section .movie-card::before {
     position: absolute;
     content: '';
     top: 0;
@@ -20,7 +34,7 @@ section .movie-card::before{
     transform: scale(0);
 }
 
-section .movie-card p{
+section .movie-card p {
     font-size: 1.2rem;
     font-weight: 400;
     text-align: center;
@@ -28,7 +42,7 @@ section .movie-card p{
     color: #bea8aa;
 }
 
-section .movie-card .content{
+section .movie-card .content {
     position: absolute;
     top: 0;
     left: 0;
@@ -38,13 +52,14 @@ section .movie-card .content{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #ffffff;  
+    color: #ffffff;
     opacity: 0;
     visibility: hidden;
     transform: scale(0);
+    transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
 }
 
-section .movie-card .content h4{
+section .movie-card .content h4 {
     position: relative;
     color: #ffffff;
     font-size: 1.2rem;
@@ -53,7 +68,7 @@ section .movie-card .content h4{
     text-transform: uppercase;
 }
 
-section .movie-card .content h4::before{
+section .movie-card .content h4::before {
     position: absolute;
     content: '';
     left: 0;
@@ -61,22 +76,48 @@ section .movie-card .content h4::before{
     height: 5px;
     width: 80%;
     background: linear-gradient(90deg, var(--primary) 0%, transparent 100%);
- 
 }
 
-section .movie-card .content ion-icon{
+section .movie-card .content ion-icon {
     font-size: 2.5rem;
-    transition: 0.3s;
+    transition: 0.3s ease;
     cursor: pointer;
 }
 
-section .movie-card .content ion-icon:hover{
+section .movie-card .content ion-icon:hover {
     color: var(--primary);
 }
 
 section .movie-card:hover .content,
-section .movie-card:hover::before{
+section .movie-card:hover::before {
     opacity: 1;
     visibility: visible;
     transform: scale(1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    section .movie-card img {
+        height: 250px;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 576px) {
+    section .movie-card img {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    section .movie-card p {
+        font-size: 1rem;
+    }
+
+    section .movie-card .content h4 {
+        font-size: 1rem;
+    }
+
+    section .movie-card .content ion-icon {
+        font-size: 2rem;
+    }
 }

@@ -1,18 +1,69 @@
-.schedule .filters{
+.schedule {
+    width: 100%;
+    padding: 50px 20px;
+}
+
+.schedule .filters {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
     margin-top: 50px;
+    gap: 10px; /* Space between filter items */
+    justify-content: center; /* Center align filters on smaller screens */
 }
-.schedule .filters li{
+
+.schedule .filters li {
     color: #ffffff;
     padding: 10px 25px;
     background: #191919;
     transition: 0.3s;
     text-transform: uppercase;
     cursor: pointer;
+    font-size: 0.9rem; /* Slightly smaller for better fit */
+    border-radius: 5px; /* Add rounded corners */
 }
+
 .schedule .filters li:hover,
-.schedule .filters li.active{
+.schedule .filters li.active {
     background: var(--primary);
+    color: #000000; /* Optional: contrast text color on active state */
+}
+
+.schedule .row.mt-5 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Center-align movies for better layout */
+}
+
+.schedule .row p {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+/* ------------------------
+Responsive Styles
+--------------------------- */
+@media (max-width: 768px) {
+    .schedule .filters li {
+        padding: 8px 15px; /* Reduce padding for smaller screens */
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .schedule .filters {
+        gap: 5px; /* Tighter spacing on very small screens */
+    }
+
+    .schedule .filters li {
+        padding: 5px 10px; /* Minimal padding for small screens */
+        font-size: 0.7rem; /* Smaller font size for narrow layouts */
+    }
+
+    .schedule .row.mt-5 {
+        gap: 10px; /* Reduce gap between movie cards */
+    }
 }
