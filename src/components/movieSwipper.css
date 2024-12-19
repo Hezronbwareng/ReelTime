@@ -10,10 +10,10 @@
     transform: translateX(-50%);
     width: 60vw;
     background: rgba(0, 0, 0, 0.4); 
-    backdrop-filter: blur(30px) saturate(120%); 
+    backdrop-filter: blur(30px) saturate(120%);
     box-shadow: 0 0 40px rgba(255, 255, 255, 0.5);
-    border-radius: 10px; 
-    animation: fadeIn 1s ease-in-out; 
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out;
     padding: 20px;
 }
 
@@ -33,7 +33,7 @@
     background-size: cover;
     width: 150px;
     height: 200px;
-    border-radius: 8px; 
+    border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -43,19 +43,16 @@
     width: 100%;
 }
 
-
 .swiper-slide:hover {
     transform: scale(1.1);
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
 }
-
 
 .swiper-slide-active {
     border: 2px solid rgba(255, 255, 255, 0.8);
     transform: scale(1.2);
 }
 
-/* Highlighted active bullet in pagination */
 .swiper-pagination-bullet {
     background: rgba(255, 255, 255, 0.5);
     transition: background 0.3s ease;
@@ -65,11 +62,9 @@
     background: rgba(255, 255, 255, 0.8);
 }
 
-
 .swiper-wrapper {
     scroll-behavior: smooth;
 }
-
 
 @supports (backdrop-filter: blur(20px)) {
     .movieSwipper {
@@ -77,7 +72,8 @@
     }
 }
 
-/* Responsive adjustments */
+
+/* Responsive adjustments
 @media (max-width: 768px) {
     .movieSwipper {
         width: 90vw;
@@ -93,4 +89,4 @@
 .movieSwipper h3 {
     color: white;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-}
+} */
