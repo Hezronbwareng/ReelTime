@@ -21,11 +21,10 @@ header {
     display: inline;
 }
 
-.menu-icon {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: #ffffff;
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between search bar and button */
 }
 
 .search-bar {
@@ -38,6 +37,19 @@ header {
     padding: 5px 12px;
     white-space: nowrap; 
 }
+
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #ffffff; 
+}
+
+.menu-icon ion-icon {
+    color: #ffffff;
+    font-size: 2rem;
+}
+
 
 /* Responsive Styles for Small Screens */
 @media (max-width: 768px) {
@@ -52,25 +64,17 @@ header {
     }
 
     .header-actions {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         width: 100%;
-        padding: 0 10px;
+        justify-content: space-between;
+        gap: 10px;
     }
 
     .search-bar {
-        order: 2;
+        flex-grow: 1;
         margin: 10px 0;
-        width: 100%;
-    }
-
-    .signIn {
-        order: 1;
     }
 
     .menu-icon {
-        order: 3;
         display: block;
     }
 
